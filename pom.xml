@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.borun</groupId>
+    <artifactId>springboot03</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>springboot03-child01</module>
+        <module>springboot03-child02</module>
+        <module>springboot03-child03</module>
+        <module>springboot03-child04</module>
+        <module>springboot03-child05</module>
+        <module>springboot03-child06</module>
+        <module>springboot03-child07</module>
+        <module>springboot03-child08</module>
+        <module>springboot03-child09</module>
+        <module>springboot03-child10</module>
+        <module>springboot03-child11</module>
+        <module>springboot03-child12</module>
+        <module>springboot03-child13</module>
+        <module>springboot03-child14</module>
+        <module>springboot03-child15</module>
+        <module>springboot03-child16</module>
+        <module>springboot03-child17</module>
+        <module>springboot03-child18</module>
+        <module>springboot03-child19</module>
+        <module>springboot03-child20</module>
+        <module>springboot03-child22</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>1.5.6.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

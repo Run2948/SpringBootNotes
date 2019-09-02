@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>My WebSocket</title>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/sockjs.min.js"></script>
+    <script type="text/javascript" src="/js/stomp.min.js"></script>
+</head>
+<script type="text/javascript">
+    var noticeSocket = function () {
+        var s = new SockJS('/wsuser');
+        var stompClient = Stomp.over(s);
+        stompClient.connect({}, function () {
+            console.log('notice socket connected!');
+            stompClient.subscribe('/user/queue/customer', function (data) {
+                $('#receive').html(data.body);
+            });
+        });
+    };
+    noticeSocket();
+</script>
+<body>
+<h1><span id="receive">等待接收消息</span></h1>
+</body>
+</html>
